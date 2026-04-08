@@ -1,0 +1,14 @@
+{
+  "name": "project-bootstrapper-marketplace",
+  "description": "Kevin Luecke's Project Bootstrapper plugin for Claude Code — composable CLAUDE.md, backbone.yml, L0-L6 maturity, agent teams, and PRP workflows.",
+  "plugins": [
+    {
+      "name": "project-bootstrapper",
+      "description": "Bootstrap, review, audit, migrate, and sync composable CLAUDE.md configurations with hooks, subagents, skills scaffolding, backbone.yml, L0-L6 maturity scoring, and PRP workflows for Claude Code",
+      "source": {
+        "type": "directory",
+        "path": "."
+      }
+    }
+  ]
+}

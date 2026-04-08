@@ -1,0 +1,9 @@
+{
+  "name": "project-bootstrapper",
+  "version": "2.0.0",
+  "description": "Bootstrap, review, audit, migrate, and sync composable CLAUDE.md configurations with hooks, subagents, skills scaffolding, backbone.yml, L0-L6 maturity scoring, and PRP workflows for Claude Code",
+  "author": {
+    "name": "Kevin Luecke"
+  },
+  "keywords": ["claude-md", "claude-code", "hooks", "subagents", "prp", "bootstrap", "code-review", "security", "observability", "validation-loop", "project-setup", "context-engineering", "backbone", "skills", "maturity-level", "agent-teams"]
+}

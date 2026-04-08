@@ -1,0 +1,27 @@
+# backbone.yml — {project_name}
+# Auto-generated. Update when project structure changes.
+version: 1
+
+structure:
+  src: src/
+  tests: tests/
+  config: config/
+  docs: docs/
+
+conventions:
+  test_pattern: "test_*"
+  config_format: yaml
+
+boundaries:
+  never_modify:
+    - .env
+    - .env.*
+    - "*.lock"
+
+agents:
+  claude:
+    main_instruction_file: CLAUDE.md
+    rules: .claude/rules/
+    skills: .claude/skills/
+    commands: .claude/commands/
+    agents: .claude/agents/

@@ -1,0 +1,43 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ruff format \"$CLAUDE_TOOL_INPUT_FILE_PATH\""
+          },
+          {
+            "type": "command",
+            "command": "ruff check --fix \"$CLAUDE_TOOL_INPUT_FILE_PATH\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ruff check . 2>&1 | tail -20"
+          },
+          {
+            "type": "command",
+            "command": "python -m pytest --tb=short -q 2>&1 | tail -20 || echo 'No tests found'"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '## Git Status' && git status --short && echo '## Active TODOs' && grep -r 'TODO:' src/ --include='*.py' 2>/dev/null | head -5 || echo 'No TODOs found'"
+          }
+        ]
+      }
+    ]
+  }
+}

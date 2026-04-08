@@ -1,0 +1,47 @@
+# INITIAL.md — {project_name}
+
+> Feature brief template. Fill this out before running `/generate-prp`.
+> The more specific you are here, the better the PRP will be.
+
+## Problem
+
+What problem does this feature solve? Who experiences it? What happens if we don't solve it?
+
+{Describe the problem in 2-3 sentences}
+
+## Users
+
+Who are the primary users of this feature?
+
+- {User type 1}: {what they need}
+- {User type 2}: {what they need}
+
+## Success Criteria
+
+How do we know this feature works? Be specific and measurable.
+
+1. {Criterion 1 — e.g., "User can sign up with email and password in <30 seconds"}
+2. {Criterion 2}
+3. {Criterion 3}
+
+## Constraints
+
+What are the non-negotiable boundaries?
+
+- **Tech stack:** {e.g., "Must use existing Flutter/Riverpod architecture"}
+- **Performance:** {e.g., "Page load <2s on 3G"}
+- **Security:** {e.g., "All user input validated, no PII in logs"}
+- **Scope:** {e.g., "MVP only — no admin panel, no analytics dashboard"}
+
+## Out of Scope
+
+What are we explicitly NOT building?
+
+- {Thing 1}
+- {Thing 2}
+
+## Context
+
+Any additional context, links, mockups, or references?
+
+- {Link or reference}

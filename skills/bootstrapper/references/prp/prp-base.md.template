@@ -1,0 +1,59 @@
+# PRP: {feature_name}
+
+> Product Requirements Prompt — an executable AI instruction document.
+> Generated from INITIAL.md by `/generate-prp`. Review before running `/execute-prp`.
+
+## Research Summary
+
+{What was discovered about the codebase, existing patterns, dependencies, and constraints}
+
+### Existing Patterns to Reuse
+- {Pattern 1 — file path and description}
+- {Pattern 2}
+
+### Dependencies Identified
+- {Dependency 1 — what it is, why it's needed}
+
+### Risks & Mitigations
+- {Risk}: {Mitigation}
+
+## Implementation Plan
+
+### Phase 1: {Phase name}
+
+**Task 1.1: {Task title}**
+- File: `{file_path}`
+- Action: {create/modify/delete}
+- Details: {What specifically to do}
+- Validation: {How to verify this task is done correctly}
+
+**Task 1.2: {Task title}**
+- File: `{file_path}`
+- Action: {create/modify/delete}
+- Details: {What specifically to do}
+- Validation: {How to verify}
+
+### Phase 2: {Phase name}
+
+**Task 2.1: {Task title}**
+...
+
+## Validation Checklist
+
+After all tasks are complete, verify:
+
+- [ ] All success criteria from INITIAL.md are met
+- [ ] Build passes with zero warnings
+- [ ] All tests pass
+- [ ] No scope creep — only planned files were touched
+- [ ] Types are strict throughout
+- [ ] Security boundaries intact
+- [ ] Code reviewed against active CLAUDE.md atoms
+
+## Notes for Claude
+
+- Execute tasks sequentially within each phase
+- Run validation after each task before moving to the next
+- If a task fails validation twice, stop and report the issue
+- Do not skip tasks or combine them
+- Reference CLAUDE.md for code style and architecture rules

@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "fvm dart format \"$CLAUDE_TOOL_INPUT_FILE_PATH\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "fvm flutter analyze --no-fatal-infos 2>&1 | tail -20"
+          },
+          {
+            "type": "command",
+            "command": "fvm flutter test --no-pub 2>&1 | tail -20"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '## Git Status' && git status --short && echo '## Active TODOs' && grep -r 'TODO:' lib/ --include='*.dart' 2>/dev/null | head -5 || echo 'No TODOs found'"
+          }
+        ]
+      }
+    ]
+  }
+}

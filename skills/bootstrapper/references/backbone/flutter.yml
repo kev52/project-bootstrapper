@@ -1,0 +1,33 @@
+# backbone.yml — {project_name}
+# Auto-generated. Update when project structure changes.
+version: 1
+
+structure:
+  lib: lib/
+  test: test/
+  assets: assets/
+  config: config/
+  docs: docs/
+
+conventions:
+  test_pattern: "*_test.dart"
+  config_format: yaml
+  entry_point: lib/main.dart
+  build_output: build/
+
+boundaries:
+  never_modify:
+    - .env
+    - pubspec.lock
+    - "*.g.dart"
+    - "*.freezed.dart"
+    - build/
+    - .dart_tool/
+
+agents:
+  claude:
+    main_instruction_file: CLAUDE.md
+    rules: .claude/rules/
+    skills: .claude/skills/
+    commands: .claude/commands/
+    agents: .claude/agents/
